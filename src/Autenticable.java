@@ -1,15 +1,7 @@
 // Esta es una superclase
-public abstract class Autenticable extends Funcionario {
+public interface Autenticable {
 
-    // Atributos
-    private String clave;
+    public void setClave(String clave);
 
-    //Metodos
-    public void setClave(String clave) {
-        this.clave = clave;
-    }
-
-    public boolean iniciarSesion(String clave) {
-        return clave == "AluraCursosOnLine";
-    }
+    public boolean iniciarSesion(String clave);
 }

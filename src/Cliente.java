@@ -1,4 +1,4 @@
-public class Cliente extends Autenticable {
+public class Cliente implements Autenticable {
 
     private String nombre;
     private String documento;
@@ -27,7 +27,12 @@ public class Cliente extends Autenticable {
     }
 
     @Override
-    public double getBonificacion() {
-        return 0;
+    public void setClave(String clave) {
+
+    }
+
+    @Override
+    public boolean iniciarSesion(String clave) {
+        return false;
     }
 }
