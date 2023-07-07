@@ -12,7 +12,7 @@ Algunos temas vistos:
 - Métodos abstractos
 - Composición de objetos
 
-** Entre otros... ** 
+Entre otros... 
 
 ```
 public class Cliente implements Autenticable { ... }
