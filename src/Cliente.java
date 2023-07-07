@@ -4,6 +4,8 @@ public class Cliente implements Autenticable {
     private String documento;
     private String telefono;
 
+    private String clave;
+
     // Getters ans setters
     public String getNombre() {
         return nombre;
@@ -28,11 +30,11 @@ public class Cliente implements Autenticable {
 
     @Override
     public void setClave(String clave) {
-
+        this.clave = clave;
     }
 
     @Override
     public boolean iniciarSesion(String clave) {
-        return false;
+        return this.clave == clave;
     }
 }
