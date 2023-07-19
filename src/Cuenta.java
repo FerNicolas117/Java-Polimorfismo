@@ -1,3 +1,5 @@
+import Exceptions.SaldoInsuficienteException;
+
 public abstract class Cuenta {
 
     // Atributos
@@ -22,7 +24,7 @@ public abstract class Cuenta {
             this.agencia = agencia;
             this.numero = numero;
         }
-        System.out.println("Estoy creando una cuenta!");
+        System.out.println("Estoy creando una cuenta con numero: " + numero);
         Cuenta.total++;
         System.out.println("Se van creando: " + total + " cuentas!");
     }
@@ -33,13 +35,18 @@ public abstract class Cuenta {
 
     // Metodo que retorna verdadero o falso
     // Saca -> retirar
-    public boolean saca(double valor) {
-        if (this.saldo >= valor) {
-            this.saldo -= valor;
-            return true;
-        } else {
-            return false;
+
+    /**
+     * La condicion para que una persona no pueda sacar dinero, a primera instancia
+     * es que el usuario no tuviera saldo, sin embargo, se pueden agregar mas motivos haciendo
+     * uso de las excepciones.
+     * Por ejemplo, que la cuenta fue bloqueada, no hay saldo...
+     */
+    public void saca(double valor) {
+        if (this.saldo < valor) {
+            throw new SaldoInsuficienteException("No tienes suficiente saldo!");
         }
+        this.saldo -= valor;
     }
 
     public boolean transferir(double valor, Cuenta destino) {
