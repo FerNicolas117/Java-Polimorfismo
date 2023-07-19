@@ -1,3 +1,5 @@
+import Exceptions.SaldoInsuficienteException;
+
 public class CuentaCorriente extends Cuenta {
 
     /**
@@ -21,7 +23,7 @@ public class CuentaCorriente extends Cuenta {
      *  Esto es polimorfismo, ya que tiene su propia logica
        sobreescribiendo el metodo de la clase madre */
     @Override // Confirma que el metodo se esta sobreescribiendo
-    public void saca(double valor) {
+    public void saca(double valor) throws SaldoInsuficienteException {
         // Comision de retiro o transferencia de 20 centavos
         double comision = 0.2;
         super.saca(valor + comision);

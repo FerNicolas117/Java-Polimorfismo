@@ -42,7 +42,7 @@ public abstract class Cuenta {
      * uso de las excepciones.
      * Por ejemplo, que la cuenta fue bloqueada, no hay saldo...
      */
-    public void saca(double valor) {
+    public void saca(double valor) throws SaldoInsuficienteException {
         if (this.saldo < valor) {
             throw new SaldoInsuficienteException("No tienes suficiente saldo!");
         }
@@ -51,7 +51,11 @@ public abstract class Cuenta {
 
     public boolean transferir(double valor, Cuenta destino) {
         if (this.saldo >= valor) {
-            this.saca(valor);
+            try {
+                this.saca(valor);
+            } catch (SaldoInsuficienteException e) {
+                e.printStackTrace();
+            }
             destino.depositar(valor);
             return true;
         }
