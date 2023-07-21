@@ -1,3 +1,8 @@
+package com.bytebank.test;
+
+import com.bytebank.modelo.CuentaAhorros;
+import com.bytebank.modelo.CuentaCorriente;
+
 public class TestCuenta {
 
     public static void main(String[] args) {
@@ -9,7 +14,7 @@ public class TestCuenta {
         cc.transferir(1000, ca);
 
         System.out.println();
-        System.out.println("Saldo de CuentaCorriente: " + cc.getSaldo());
-        System.out.println("Saldo de Cuenta Ahorros: " + ca.getSaldo());
+        System.out.println("Saldo de Modelo.CuentaCorriente: " + cc.getSaldo());
+        System.out.println("Saldo de Modelo.Cuenta Ahorros: " + ca.getSaldo());
     }
 }

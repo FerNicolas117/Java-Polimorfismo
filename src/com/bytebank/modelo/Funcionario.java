@@ -1,7 +1,9 @@
+package com.bytebank.modelo;
+
 // Un funcionario es cualquier trabajador del banco
 public abstract class Funcionario {
 
-    // Funcionario va a contar con 3 atributos
+    // Modelo.Funcionario va a contar con 3 atributos
     private String nombre;
     private String documento;
     private double salario;
@@ -43,8 +45,8 @@ public abstract class Funcionario {
     }
 
     // Metodo de bonificacion basado en un 10% de su salrio
-    /* Como Funcionario es una clase abstracta, esta no deberia tener
+    /* Como Modelo.Funcionario es una clase abstracta, esta no deberia tener
        una propia regla para la bonificacion */
-    // Gerente y Contador definen su propia bonificacion (polimorfimso).
+    // Modelo.Gerente y Modelo.Contador definen su propia bonificacion (polimorfimso).
     public abstract double getBonificacion();
 }

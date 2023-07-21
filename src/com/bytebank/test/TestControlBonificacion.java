@@ -1,3 +1,11 @@
+package com.bytebank.test;
+
+// FQN = pqeuete.clase
+import com.bytebank.modelo.Contador;
+import com.bytebank.modelo.ControlBonificacion;
+import com.bytebank.modelo.Funcionario;
+import com.bytebank.modelo.Gerente;
+
 public class TestControlBonificacion {
 
     public static void main(String[] args) {

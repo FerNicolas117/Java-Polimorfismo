@@ -15,8 +15,8 @@ Algunos temas vistos:
 Entre otros... 
 
 ```
-public class Cliente implements Autenticable { ... }
-public class Administrador extends Funcionario implementes Autenticable { ... }
+public class com.bytebank.modelo.cliente.Cliente implements com.bytebank.modelo.Autenticable { ... }
+public class com.bytebank.modelo.Administrador extends com.bytebank.modelo.Funcionario implementes com.bytebank.modelo.Autenticable { ... }
 ```
 
 El objetivo es llegar a tener en concepto de código el siguiente diagrama:

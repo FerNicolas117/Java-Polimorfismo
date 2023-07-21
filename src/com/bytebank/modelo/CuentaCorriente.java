@@ -1,10 +1,12 @@
-import Exceptions.SaldoInsuficienteException;
+package com.bytebank.modelo;
+
+import com.bytebank.exceptions.SaldoInsuficienteException;
 
 public class CuentaCorriente extends Cuenta {
 
     /**
      * Como la clase cuanta requiere necesariamente de una agencia y un
-       numero, tambien en la clase CuentaCorriente debe de seguir la misma regla
+       numero, tambien en la clase Modelo.CuentaCorriente debe de seguir la misma regla
        de negocio, por lo tanto, como "super" invoca al metodo constructor de la
        super clase, y no hay un constructor default, tenemos que pasarle los parametros
        del mismo tipo de dato

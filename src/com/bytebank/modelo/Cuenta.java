@@ -1,4 +1,7 @@
-import Exceptions.SaldoInsuficienteException;
+package com.bytebank.modelo;
+
+import com.bytebank.exceptions.SaldoInsuficienteException;
+import com.bytebank.modelo.cliente.Cliente;
 
 public abstract class Cuenta {
 

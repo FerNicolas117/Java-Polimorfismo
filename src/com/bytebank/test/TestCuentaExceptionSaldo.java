@@ -1,4 +1,8 @@
-import Exceptions.SaldoInsuficienteException;
+package com.bytebank.test;
+
+import com.bytebank.exceptions.SaldoInsuficienteException;
+import com.bytebank.modelo.Cuenta;
+import com.bytebank.modelo.CuentaAhorros;
 
 public class TestCuentaExceptionSaldo {
 
@@ -13,6 +17,6 @@ public class TestCuentaExceptionSaldo {
             e.printStackTrace();
         }
 
-        System.out.println("Saldo disponible: " + cuenta.saldo);
+        System.out.println("Saldo disponible: " + cuenta.getSaldo());
     }
 }

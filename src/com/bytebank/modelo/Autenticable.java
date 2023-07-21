@@ -1,3 +1,5 @@
+package com.bytebank.modelo;
+
 // Esta es una superclase
 public interface Autenticable {
 

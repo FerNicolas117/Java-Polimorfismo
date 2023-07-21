@@ -1,3 +1,7 @@
+package com.bytebank.test;
+
+import com.bytebank.modelo.cliente.Cliente;
+
 public class TestCliente {
 
     public static void main(String[] args) {

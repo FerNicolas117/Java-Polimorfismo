@@ -1,4 +1,4 @@
-package Exceptions;
+package com.bytebank.exceptions;
 public class SaldoInsuficienteException extends Exception {
 
     /**Se declara el constructor de SaldoInsuficienteException y cada vez que

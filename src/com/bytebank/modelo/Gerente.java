@@ -1,6 +1,8 @@
+package com.bytebank.modelo;
+
 // El gerente tambien corresponde a un fucionario del banco
-// Gerente es o extiende de Funcionario
-// Gerente ahora extiende de FuncionarioAutenticable
+// Modelo.Gerente es o extiende de Modelo.Funcionario
+// Modelo.Gerente ahora extiende de FuncionarioAutenticable
 public class Gerente extends Funcionario implements Autenticable {
 
     // Sobreescritura de metodo
