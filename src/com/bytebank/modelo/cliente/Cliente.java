@@ -3,6 +3,13 @@ package com.bytebank.modelo.cliente;
 import com.bytebank.modelo.Autenticable;
 import com.bytebank.modelo.AutenticacionUtil;
 
+/**
+ * Clase que representa a un cliente en ByteBank
+ *
+ * @author Fernando Nicolas
+ * @version 1.0
+ */
+
 public class Cliente implements Autenticable {
 
     private String nombre;

@@ -3,7 +3,18 @@ package com.bytebank.modelo;
 import com.bytebank.exceptions.SaldoInsuficienteException;
 import com.bytebank.modelo.cliente.Cliente;
 
+/**
+ * Cuenta va a crear nuevas instancias  de CuentaCorriente
+ * @version 1.0
+ * @author Fernando Nicolas
+ */
+
 public abstract class Cuenta {
+
+    // public   -> Accesible desde cualquier parte del proyecto
+    // default  -> Accesible dentro del paquete
+    // protected    -> default + clases hijas
+    // private  -> solo desde la clase misma
 
     // Atributos
     protected double saldo; // Es accesible desde sus clases hijas
@@ -15,9 +26,19 @@ public abstract class Cuenta {
     private static int total = 0;
 
     // Metodo constructor default
+
+    /**
+     * Instancia una nueva cuenta sin parametros
+     */
     public Cuenta() {}
 
     // Metodo constructor
+
+    /**
+     * Instancia una cuenta usando agencia y numero
+     * @param agencia
+     * @param numero
+     */
     public Cuenta(int agencia, int numero) {
         if (agencia <= 0 && numero <= 0) {
             System.out.println("No se permite 0!");
@@ -39,11 +60,17 @@ public abstract class Cuenta {
     // Metodo que retorna verdadero o falso
     // Saca -> retirar
 
-    /**
+    /*
      * La condicion para que una persona no pueda sacar dinero, a primera instancia
      * es que el usuario no tuviera saldo, sin embargo, se pueden agregar mas motivos haciendo
      * uso de las excepciones.
      * Por ejemplo, que la cuenta fue bloqueada, no hay saldo...
+     */
+
+    /**
+     * Este metodo retira dinero de la cuenta, y si ocurre un error devuelve una excepcion
+     * @param valor
+     * @throws SaldoInsuficienteException
      */
     public void saca(double valor) throws SaldoInsuficienteException {
         if (this.saldo < valor) {
