@@ -123,4 +123,10 @@ public abstract class Cuenta {
     public static int getTotal() {
         return total;
     }
+
+    @Override
+    public String toString() {
+        String cuenta = "Agencia: " + this.agencia + ", Numero: " + this.numero;
+        return cuenta;
+    }
 }
