@@ -50,7 +50,7 @@ public abstract class Cuenta {
         }
         System.out.println("Estoy creando una cuenta con numero: " + numero);
         Cuenta.total++;
-        System.out.println("Se van creando: " + total + " cuentas!");
+        // System.out.println("Se van creando: " + total + " cuentas!");
     }
 
     // void no retorna valor
@@ -126,7 +126,7 @@ public abstract class Cuenta {
 
     @Override
     public String toString() {
-        String cuenta = "Agencia: " + this.agencia + ", Numero: " + this.numero;
+        String cuenta = "Numero: " + this.numero + ", Agencia: " + this.agencia;
         return cuenta;
     }
 }
