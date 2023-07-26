@@ -4,14 +4,16 @@ import com.bytebank.modelo.Cuenta;
 import com.bytebank.modelo.CuentaCorriente;
 import com.bytebank.modelo.cliente.Cliente;
 
-import java.util.ArrayList;
+import java.util.*;
 
 public class TestArrayList {
 
     public static void main(String[] args) {
 
         // ArrayList es dinamico, <> Forzando a que acepte solo un tipo de dato
-        ArrayList<Cuenta> lista = new ArrayList<>();
+        //List<Cliente> listaClientes = new LinkedList<>();
+
+        List<Cuenta> lista = new Vector<Cuenta>();
         // Referencia   Objeto
         Cuenta cc = new CuentaCorriente(11, 22);
         Cuenta cc2 = new CuentaCorriente(13, 42);
