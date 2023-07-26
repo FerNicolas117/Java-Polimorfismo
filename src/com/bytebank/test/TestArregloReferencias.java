@@ -13,9 +13,10 @@ public class TestArregloReferencias {
 
         // La variable cc es la referencia al objeto de CuentaCorriente con dichos valores que esta
         // en la memoria heap
-        CuentaCorriente cc = new CuentaCorriente(23, 44);
 
         //                          [ new  | cc  | null  | null  | null  ]
+        CuentaCorriente cc = new CuentaCorriente(23, 44);
+
         referencias[1] = cc;
 
         Cliente cliente = new Cliente();
